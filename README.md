@@ -2,7 +2,7 @@
 
     -Web app that lets you sort beanie babies by astrological sign
 
-![](wireframe.png)
+![wireframe diagram for application](wireframe.png)
 
 ## Make a plan
 
