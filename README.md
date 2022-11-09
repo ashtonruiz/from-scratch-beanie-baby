@@ -1,27 +1,64 @@
-## The Golden Rule:
+# Precious Beanie Babies
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+    -Web app that lets you sort beanie babies by astrological sign
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+![](wireframe.png)
 
-## Making a plan
+## Make a plan
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+-   build out HTML
+-   light CSS - general layout of what the final product will look like
+-   JAVASCRIPT
+    -Fetch functions first and the console log to make sure everything is working.
+    -Render functions and then display functions and event listeners.
+    ​
 
-Additional considerations:
+## HTML elements (stuff present upon page load)
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+h1
+script
+ul
+input
+button
+
+## State (everything you need to track internally using JS variables)
+
+-   array of babies (beanie variety)
+-   array of horoscope signs
+    ​
+
+## Events (anything that happens via JS when the user interacts with your site)
+
+-   on page load:
+
+    -   fetch beanie baby list
+    -   pass list to display function
+
+-   on astrology sign form submit:
+    -   fetch beanie baby list filtered by astrological sign
+    -   pass list to display function
+
+## Functions (to plan out how you'll segment things)
+
+### Render Functions
+
+-   `renderBabyElement` - returns HTML box for each individual beanie baby
+-   `renderAstroOption` - returns HTML option for astrological sign dropdown menu
+
+### Display Functions
+
+-   `displayBabies(sign)` - fetches, renders and displays all babies with sign `sign`
+-   `displaySignOption` - fetches, renders and adds to dropdown all astrological signs in database
+
+### Fetch Functions
+
+-   `fetchBabies(sign)` - fetches list of babies with sign `sign` if no sign provided, fetch all babies
+-   `fetchSigns` - fetches list of astrological signs from database
+    ​
+
+## Slices (list of features that need to be written in order, usually bc each one depends on the previous)
+
+1. Write `fetchBabies` function `renderBabies`, test.
+2. Write `displayBabies()` without `sign` filtering capability, test.
+3. Write `fetchSigns` function as well as the `renderAstroOption`, test.
+4. Write `displaySignOption`, event listener for the drop down menu, test.
