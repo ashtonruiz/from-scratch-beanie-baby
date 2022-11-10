@@ -1,5 +1,5 @@
 /* Imports */
-import { fetchBabies } from './fetch.utils.js';
+import { fetchBabies, fetchSigns } from './fetch.utils.js';
 
 /* Get DOM Elements */
 
@@ -11,3 +11,4 @@ import { fetchBabies } from './fetch.utils.js';
 
 // (don't forget to call any display functions you want to run on page load!)
 console.log(fetchBabies());
+console.log(fetchSigns());

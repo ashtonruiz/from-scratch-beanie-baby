@@ -8,9 +8,15 @@ export async function fetchBabies(sign) {
     let query = client.from('beanie_babies').select('*').order('title').limit(100);
 
     if (sign) {
-        query = query.eq('beanie_baby_astroSigns', sign);
+        query = query.eq('astroSign', sign);
     }
 
+    const response = await query;
+    return response;
+}
+
+export async function fetchSigns() {
+    let query = client.from('beanie_baby_astro_signs').select('*');
     const response = await query;
     return response;
 }
