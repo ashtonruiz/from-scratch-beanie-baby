@@ -1,4 +1,5 @@
 /* Imports */
+import { fetchBabies } from './fetch.utils.js';
 
 /* Get DOM Elements */
 
@@ -9,3 +10,4 @@
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
+fetchBabies();
