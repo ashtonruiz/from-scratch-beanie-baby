@@ -1,12 +1,14 @@
 export function renderBabyElement(baby) {
     let babyBoxEl = document.createElement('li');
-    let babyNameEl = document.createElement('p');
+    let babyNameEl = document.createElement('h2');
+    let babyReleaseYear = document.createElement('p');
     let babySignEl = document.createElement('p');
 
-    babyNameEl = baby.title;
-    babySignEl = baby.astroSign;
+    babyNameEl.textContent = baby.title;
+    babyReleaseYear.textContent = `Released ${baby.releaseYear}`;
+    babySignEl.textContent = baby.astroSign;
 
-    babyBoxEl.append(babyNameEl, babySignEl);
+    babyBoxEl.append(babyNameEl, babyReleaseYear, babySignEl);
     babyBoxEl.classList.add('baby-box');
 
     return babyBoxEl;

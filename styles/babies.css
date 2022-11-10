@@ -1,10 +1,12 @@
 header {
     background-color: lightpink;
+    font-family: 'Fredoka One';
 }
 
 body {
     background-color: lavender;
     text-align: center;
+    font-family: 'Fredoka One';
 }
 
 #sign-select-form {
@@ -14,16 +16,24 @@ body {
     gap: 10px;
 }
 
+#filter-submit-button {
+    font-family: 'Fredoka One';
+}
+
 #sign-select-dropdown {
     min-width: 150px;
+    font-family: 'Fredoka One';
 }
 
 .baby-box {
     border: thick dashed purple;
     background-color: lightcoral;
     padding: 3px;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+    font-size: 1em;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 #baby-list {
