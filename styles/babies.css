@@ -42,6 +42,10 @@ body {
     flex-flow: column nowrap;
 }
 
+.baby-box:hover {
+    background-color: lightpink;
+}
+
 #baby-list {
     display: flex;
     flex-flow: row wrap;
