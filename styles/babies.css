@@ -1,6 +1,12 @@
 header {
     background-color: lightpink;
     font-family: 'Fredoka One';
+    display: flex;
+    justify-content: space-around;
+}
+
+.dancing-platypus {
+    height: 50px;
 }
 
 body {
