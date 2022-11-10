@@ -23,3 +23,8 @@ body {
     background-color: lightcoral;
     padding: 3px;
 }
+
+/* cursor stays at bottom of CSS page */
+* {
+    cursor: url(https://ani.cursors-4u.net/nature/nat-11/nat1047.cur), auto !important;
+}
