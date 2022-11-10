@@ -19,7 +19,6 @@ window.addEventListener('load', async () => {
 signSelectFormEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(signSelectFormEl);
-    console.log(formData);
     displayBabies(formData.get('sign'));
 });
 
