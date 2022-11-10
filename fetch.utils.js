@@ -5,7 +5,7 @@ const SUPABASE_KEY =
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function fetchBabies(sign) {
-    let query = client.from('beanie_babies').select('*').order('name').limit(100);
+    let query = client.from('beanie_babies').select('*').order('title').limit(100);
 
     if (sign) {
         query = query.eq('beanie_baby_astroSigns', sign);
