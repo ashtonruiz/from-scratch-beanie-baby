@@ -18,5 +18,6 @@ export async function fetchBabies(sign) {
 export async function fetchSigns() {
     let query = client.from('beanie_baby_astro_signs').select('*');
     const response = await query;
+    console.log(response);
     return response;
 }
