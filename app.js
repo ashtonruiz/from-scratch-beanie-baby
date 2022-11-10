@@ -10,7 +10,9 @@ let babyList = [];
 
 /* Events */
 window.addEventListener('load', async () => {
+    // get data from database
     const response = await fetchBabies('Pisces');
+    // load data into array
     babyList = response.data;
     displayBabies();
 });
@@ -24,5 +26,3 @@ function displayBabies() {
 }
 
 // (don't forget to call any display functions you want to run on page load!)
-console.log(fetchBabies('Pisces'));
-console.log(fetchSigns());
