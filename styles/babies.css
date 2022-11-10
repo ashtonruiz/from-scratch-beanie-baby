@@ -40,6 +40,7 @@ body {
     font-size: 1em;
     display: flex;
     flex-flow: column nowrap;
+    background-size: cover;
 }
 
 .baby-box:hover {

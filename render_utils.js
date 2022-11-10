@@ -7,10 +7,11 @@ export function renderBabyElement(baby) {
     babyNameEl.textContent = baby.title;
     babyReleaseYear.textContent = `Released ${baby.releaseYear}`;
     babySignEl.textContent = baby.astroSign;
-
+    if (baby.astroSign === null) {
+        babySignEl.textContent = 'no sign';
+    }
     babyBoxEl.append(babyNameEl, babyReleaseYear, babySignEl);
     babyBoxEl.classList.add('baby-box');
-
     return babyBoxEl;
 }
 
