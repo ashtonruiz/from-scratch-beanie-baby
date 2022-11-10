@@ -14,4 +14,10 @@ export function renderBabyElement(baby) {
     return babyBoxEl;
 }
 
-export function renderAstroOption(sign) {}
+export function renderAstroOption(sign) {
+    const listEl = document.createElement('li');
+    listEl.value = sign;
+    listEl.textContent = sign;
+
+    return listEl;
+}

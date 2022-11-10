@@ -7,18 +7,17 @@ const babyListEl = document.getElementById('baby-list');
 
 /* State */
 let babyList = [];
+let astroSigns = [];
 
 /* Events */
 window.addEventListener('load', async () => {
-    // get data from database
-    const response = await fetchBabies('Pisces');
-    // load data into array
-    babyList = response.data;
-    displayBabies();
+    displayBabies(); // do not initially filter babies
 });
 
 /* Display Functions */
-function displayBabies() {
+async function displayBabies(sign) {
+    const response = await fetchBabies(sign);
+    babyList = response.data;
     for (let baby of babyList) {
         let babyEl = renderBabyElement(baby);
         babyListEl.append(babyEl);
