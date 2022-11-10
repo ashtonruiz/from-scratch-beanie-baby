@@ -1,0 +1,60 @@
+header {
+    background-color: lightpink;
+    font-family: 'Fredoka One';
+    display: flex;
+    justify-content: space-around;
+}
+
+.dancing-platypus {
+    height: 50px;
+}
+
+body {
+    background-color: lavender;
+    text-align: center;
+    font-family: 'Fredoka One';
+}
+
+#sign-select-form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#filter-submit-button {
+    font-family: 'Fredoka One';
+}
+
+#sign-select-dropdown {
+    min-width: 150px;
+    font-family: 'Fredoka One';
+}
+
+.baby-box {
+    border: thick dashed purple;
+    background-color: lightcoral;
+    padding: 3px;
+    height: 200px;
+    width: 200px;
+    font-size: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    background-size: cover;
+}
+
+.baby-box:hover {
+    background-color: lightpink;
+}
+
+#baby-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* cursor stays at bottom of CSS page */
+* {
+    cursor: url(https://ani.cursors-4u.net/nature/nat-11/nat1047.cur), auto !important;
+}
