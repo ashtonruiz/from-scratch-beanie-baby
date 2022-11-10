@@ -5,7 +5,7 @@ import { renderBabyElement, renderAstroOption } from './render_utils.js';
 /* Get DOM Elements */
 const babyListEl = document.getElementById('baby-list');
 const signSelectEl = document.getElementById('sign-select-dropdown');
-
+const signSelectFormEl = document.getElementById('sign-select-form');
 /* State */
 let babyList = [];
 let astroSigns = [];
@@ -16,8 +16,16 @@ window.addEventListener('load', async () => {
     displaySignOptions(); // render options in dropdown menu from database
 });
 
+signSelectFormEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(signSelectFormEl);
+    console.log(formData);
+    displayBabies(formData.get('sign'));
+});
+
 /* Display Functions */
 async function displayBabies(sign) {
+    babyListEl.textContent = '';
     const response = await fetchBabies(sign);
     babyList = response.data;
     for (let baby of babyList) {
