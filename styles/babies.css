@@ -15,6 +15,10 @@ body {
     font-family: 'Fredoka One';
 }
 
+#page-title {
+    text-decoration-line: underline;
+}
+
 #sign-select-form {
     display: flex;
     flex-flow: row nowrap;
@@ -40,11 +44,18 @@ body {
     font-size: 1em;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-end;
     background-size: cover;
 }
 
 .baby-box:hover {
     background-color: lightpink;
+    border: thick dashed red;
+}
+
+.baby-box-text {
+    border: thin dotted red;
+    background-color: #d283bb66;
 }
 
 #baby-list {
